@@ -9,8 +9,16 @@ const presets = [
                 safari: "11.1",
             },
             useBuiltIns: "usage",
+            corejs: 3,
         },
     ],
 ];
 
-module.exports = { presets };
+const plugins = [
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-transform-arrow-functions",
+    "@babel/plugin-transform-block-scoping",
+    "@babel/plugin-proposal-async-generator-functions"
+]
+
+module.exports = { presets, plugins };
